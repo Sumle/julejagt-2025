@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/julejagt-2025/static/css/main.7c9c58f8.css",
+    "main.js": "/julejagt-2025/static/js/main.eb103ff9.js",
+    "index.html": "/julejagt-2025/index.html",
+    "main.7c9c58f8.css.map": "/julejagt-2025/static/css/main.7c9c58f8.css.map",
+    "main.eb103ff9.js.map": "/julejagt-2025/static/js/main.eb103ff9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c9c58f8.css",
+    "static/js/main.eb103ff9.js"
+  ]
+}
