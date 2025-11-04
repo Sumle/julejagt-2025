@@ -217,6 +217,25 @@ export default function App() {
         closeScanner();
     };
 
+    const showHintForCode = (code) => {
+        const match = code.match(/(\d{1,2})$/);
+        const num = match ? parseInt(match[1], 10) : null;
+        const rhyme = num ? RHYMES[num] : null;
+
+        if (!num) {
+            alert("Ingen hint til den kode.");
+            return;
+        }
+
+        let msg = `🎄 Hint til kode #${num + 1}\n`;
+        if (rhyme) {
+            msg += `\n${rhyme}`;
+        } else {
+            msg += "\n(der er ikke skrevet et hint til denne endnu)";
+        }
+        alert(msg);
+    };
+
     const openScanner = async () => {
         setShowScanner(true);
         try {
@@ -374,9 +393,18 @@ export default function App() {
                             <h3 className="font-bold text-blue-900 mb-2">🎅 Sådan spiller du:</h3>
                             <ul className="text-sm text-blue-800 space-y-1">
                                 <li>• Find alle 24 QR-koder gemt rundt omkring</li>
-                                <li>• Tryk på “Scan QR-kode”</li>
-                                <li>• Peg kameraet på en af de røde nissekoder</li>
+                                <li>• Tryk på “Scan QR-kode” til at scanne QR-koder</li>
+                                <li>• Peg kameraet på en QR-kode</li>
+                                <li>• Følg rækkefølgen 1-24, for at få hints til at finde næste kode</li>
+                                <li>• Hvis du glemmer et hint, så klik på det tal for at læse hintet igen</li>
+                                <li>• Den første til at finde alle 24 koder vinder en ekstra præmie! 🎁</li>
                             </ul>
+                            <div className="mt-4 bg-green-50 border border-green-200 rounded-lg p-3">
+                                <p className="text-sm text-green-900 font-semibold mb-1">🔍 Første hint:</p>
+                                <p className="text-sm text-green-800 italic">
+                                    “Nede i bunden, oppe i hjørnet, sidder en rød kasse”
+                                </p>
+                            </div>
                         </div>
 
                         <button
@@ -419,16 +447,26 @@ export default function App() {
                                     const code = `XMAS2025-${codeNum}`.toUpperCase();
                                     const found = myScans.includes(code);
                                     return (
-                                        <div
+                                        <button
                                             key={i}
-                                            className={`aspect-square rounded-lg flex items-center justify-center font-bold transition ${found ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-400'
-                                                }`}
+                                            type="button"
+                                            onClick={() => {
+                                                if (found) {
+                                                    showHintForCode(code);
+                                                } else {
+                                                    alert("Du har ikke scannet den her endnu 🎄");
+                                                }
+                                            }}
+                                            className={`aspect-square rounded-lg flex items-center justify-center font-bold transition
+          ${found ? 'bg-green-500 text-white hover:bg-green-600' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}
+        `}
                                         >
                                             {found ? '✓' : (i + 1)}
-                                        </div>
+                                        </button>
                                     );
                                 })}
                             </div>
+
                         </div>
 
                     </div>
