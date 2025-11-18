@@ -397,7 +397,7 @@ export default function App() {
                                 <li>• Peg kameraet på en QR-kode</li>
                                 <li>• Følg rækkefølgen 1-24, for at få hints til at finde næste kode</li>
                                 <li>• Hvis du glemmer et hint, så klik på det tal for at læse hintet igen</li>
-                                <li>• Den første til at finde alle 24 koder vinder en ekstra præmie! 🎁</li>
+                                <li>• Der bliver taget lodtrækning, mellem dem der har deltaget. Vinderen får en præmie! 🎁</li>
                             </ul>
                             <div className="mt-4 bg-green-50 border border-green-200 rounded-lg p-3">
                                 <p className="text-sm text-green-900 font-semibold mb-1">🔍 Første hint:</p>
