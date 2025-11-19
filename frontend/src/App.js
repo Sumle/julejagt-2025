@@ -501,7 +501,7 @@ function LoginRegisterView({ view, setView, handleRegister, handleLogin }) {
                 <form className="space-y-4" onSubmit={onSubmit}>
                     {view === 'register' && (
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Dit navn</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Navn</label>
                             <input
                                 type="text"
                                 value={formData.username}
@@ -520,7 +520,7 @@ function LoginRegisterView({ view, setView, handleRegister, handleLogin }) {
                             value={formData.userid}
                             onChange={(e) => setFormData({ ...formData, userid: e.target.value })}
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            placeholder="fx medarbejder-id eller et sjovt kaldenavn"
+                            placeholder="fx medarbejder-id/et sjovt navn"
                             autoComplete="off"
                         />
                     </div>
