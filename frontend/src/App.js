@@ -189,7 +189,7 @@ export default function App() {
         } catch (error) {
             console.error(error);
             if (error.code === 'auth/email-already-in-use') {
-                alert('Dette Bruger ID er allerede i brug!');
+                alert('Dette Kaldenavn er allerede i brug!');
             } else {
                 alert('Registrering mislykkedes: ' + error.message);
             }
@@ -208,7 +208,7 @@ export default function App() {
             await signInWithEmailAndPassword(auth, email, pw);
         } catch (error) {
             console.error(error);
-            alert('Ugyldigt Bruger ID eller adgangskode');
+            alert('Ugyldigt Kaldenavn eller adgangskode');
         }
     };
 
@@ -514,7 +514,7 @@ function LoginRegisterView({ view, setView, handleRegister, handleLogin }) {
                     )}
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Bruger ID</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Kaldenavn</label>
                         <input
                             type="text"
                             value={formData.userid}
@@ -587,7 +587,7 @@ function AdminView({ users, handleLogout }) {
                             <div className="flex justify-between items-start mb-4">
                                 <div>
                                     <h2 className="text-xl font-bold text-gray-800">{user.username}</h2>
-                                    <p className="text-gray-600">Bruger ID: {user.userId}</p>
+                                    <p className="text-gray-600">Kaldenavn: {user.userId}</p>
                                     <p className="text-gray-500 text-sm">
                                         {user.completedAt
                                             ? `Færdig: ${new Date(user.completedAt).toLocaleString()}`
