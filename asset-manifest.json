@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/julejagt-2025/static/css/main.782d478a.css",
-    "main.js": "/julejagt-2025/static/js/main.df06c01e.js",
+    "main.js": "/julejagt-2025/static/js/main.d0646f08.js",
     "index.html": "/julejagt-2025/index.html",
     "main.782d478a.css.map": "/julejagt-2025/static/css/main.782d478a.css.map",
-    "main.df06c01e.js.map": "/julejagt-2025/static/js/main.df06c01e.js.map"
+    "main.d0646f08.js.map": "/julejagt-2025/static/js/main.d0646f08.js.map"
   },
   "entrypoints": [
     "static/css/main.782d478a.css",
-    "static/js/main.df06c01e.js"
+    "static/js/main.d0646f08.js"
   ]
 }
