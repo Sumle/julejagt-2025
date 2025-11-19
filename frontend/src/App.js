@@ -520,7 +520,7 @@ function LoginRegisterView({ view, setView, handleRegister, handleLogin }) {
                             value={formData.userid}
                             onChange={(e) => setFormData({ ...formData, userid: e.target.value })}
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            placeholder="fx medarbejder-id"
+                            placeholder="fx medarbejder-id eller et sjovt kaldenavn"
                             autoComplete="off"
                         />
                     </div>
